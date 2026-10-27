@@ -21,11 +21,10 @@ Review the current Git working tree and suggest the smallest set of atomic commi
 
 ## Commit Messages
 
-Use the Conventional Commits format: `type[optional scope]: description`
+Use the Conventional Commits format: `type: description`
 
 * Common types: `feat`, `fix`, `docs`, `style`, `refactor`, `perf`, `test`, `build`, `ci`, `chore`, `revert`.
-* The scope is optional, written in parentheses, e.g. `fix(cache):`.
-* The description (the part after the `type[optional scope]: ` prefix) **should be between 28 and 40 characters**, not counting the prefix.
+* The full commit message, including the `type: ` prefix, **should be between 28 and 40 characters**.
 * Use the imperative mood.
 * Always start the description with a common verb.
 * Write the description in sentence case.
@@ -44,12 +43,12 @@ If there are multiple independent logical changes, group files into separate ato
 
 Output exactly:
 
-Commit 1: `type[optional scope]: description`
+Commit 1: `type: description`
 
 * path/to/file1
 * path/to/file2
 
-Commit 2: `type[optional scope]: description`
+Commit 2: `type: description`
 
 * path/to/file3
 * path/to/file4
@@ -58,14 +57,14 @@ If only one logical commit is needed, output **only** the commit message.
 
 Example:
 
-refactor(auth): Simplify middleware wiring layer
+refactor: Simplify middleware wiring
 
 Do not output anything else.
 
 # Individual Commit Examples
 
 * feat: Add user profile field validation
-* fix(cache): Resolve stale invalidation bug
+* fix: Resolve stale invalidation bug
 * refactor: Simplify auth middleware chain
 * chore: Remove unused request helper code
 * perf: Improve search result sort speed
